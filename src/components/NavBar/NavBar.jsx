@@ -65,7 +65,7 @@ export default function NavBar (){
                     <Link to='/contact' className={styles.link}>Contacto</Link>
                 </div>
             </div>
-            <motion.div className={styles.navegacionBtnCont} variants={navegacionVariants} hidden='hidden' animate={url==='/'||projectBack?'hidden':'show'} exit='exit' >
+            <motion.div className={styles.navegacionBtnCont} variants={navegacionVariants} hidden='hidden' animate={url==='/portafolio'||projectBack?'hidden':'show'} exit='exit' >
                 <Link to={urlNext} className={urlNext===null?styles.none:styles.btnLinkNext} onClick={()=>{dispacth({type:'project-back', payload:false})}}></Link>
                 <Link to={urlPrev} className={styles.btnLinkPrev} onClick={()=>{dispacth({type:'project-back', payload:false})}}></Link>
             </motion.div>
