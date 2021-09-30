@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/portafolio/static/css/main.ed9210a0.chunk.css",
+    "main.js": "/portafolio/static/js/main.e006bffa.chunk.js",
+    "main.js.map": "/portafolio/static/js/main.e006bffa.chunk.js.map",
+    "runtime-main.js": "/portafolio/static/js/runtime-main.ea17370c.js",
+    "runtime-main.js.map": "/portafolio/static/js/runtime-main.ea17370c.js.map",
+    "static/js/2.585fd9c8.chunk.js": "/portafolio/static/js/2.585fd9c8.chunk.js",
+    "static/js/2.585fd9c8.chunk.js.map": "/portafolio/static/js/2.585fd9c8.chunk.js.map",
+    "static/js/3.b281ec47.chunk.js": "/portafolio/static/js/3.b281ec47.chunk.js",
+    "static/js/3.b281ec47.chunk.js.map": "/portafolio/static/js/3.b281ec47.chunk.js.map",
+    "index.html": "/portafolio/index.html",
+    "static/css/main.ed9210a0.chunk.css.map": "/portafolio/static/css/main.ed9210a0.chunk.css.map",
+    "static/js/2.585fd9c8.chunk.js.LICENSE.txt": "/portafolio/static/js/2.585fd9c8.chunk.js.LICENSE.txt",
+    "static/media/Home.module.scss": "/portafolio/static/media/whatsapp.8f84e8ce.png",
+    "static/media/CVLlobellEspañol.74340a2e.pdf": "/portafolio/static/media/CVLlobellEspañol.74340a2e.pdf",
+    "static/media/NavBar.module.css": "/portafolio/static/media/arrow.9edfd30d.png",
+    "static/media/cardfondo.172cb340.png": "/portafolio/static/media/cardfondo.172cb340.png",
+    "static/media/cardfondo.1bddbee8.png": "/portafolio/static/media/cardfondo.1bddbee8.png",
+    "static/media/cardfondo.4d8b9bc0.png": "/portafolio/static/media/cardfondo.4d8b9bc0.png",
+    "static/media/carrusel.0f0639f9.gif": "/portafolio/static/media/carrusel.0f0639f9.gif",
+    "static/media/projects.module.scss": "/portafolio/static/media/cross.1bd93049.png",
+    "static/media/detalle.4ab98b13.jpg": "/portafolio/static/media/detalle.4ab98b13.jpg",
+    "static/media/email.cc39a90b.png": "/portafolio/static/media/email.cc39a90b.png",
+    "static/media/Pages.css": "/portafolio/static/media/fotoperfil.d45cd8ea.png",
+    "static/media/inicio.b6f41294.jpg": "/portafolio/static/media/inicio.b6f41294.jpg",
+    "static/media/landing.be4e866c.jpg": "/portafolio/static/media/landing.be4e866c.jpg",
+    "static/media/lotes.17bc5382.jpg": "/portafolio/static/media/lotes.17bc5382.jpg",
+    "static/media/manejo.d7bf0a59.gif": "/portafolio/static/media/manejo.d7bf0a59.gif",
+    "static/media/menu.91273b77.jpg": "/portafolio/static/media/menu.91273b77.jpg",
+    "static/media/responsive.7fbb2562.gif": "/portafolio/static/media/responsive.7fbb2562.gif",
+    "static/media/telefono.c7cda03d.png": "/portafolio/static/media/telefono.c7cda03d.png",
+    "static/media/ubicacion.490e554f.png": "/portafolio/static/media/ubicacion.490e554f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ea17370c.js",
+    "static/js/2.585fd9c8.chunk.js",
+    "static/css/main.ed9210a0.chunk.css",
+    "static/js/main.e006bffa.chunk.js"
+  ]
+}
