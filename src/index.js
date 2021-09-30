@@ -10,7 +10,7 @@ import store from './redux/store'
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter basename='/portafolio'>
         <App />
       </BrowserRouter>
     </Provider>

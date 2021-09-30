@@ -39,18 +39,18 @@ export default function NavBar (){
         setUrl(window.location.pathname);
     },[window.location.pathname])
     useEffect(()=>{
-        if(url==='/portafolio/about'){
-            setUrlNext('/portafolio/skills');
-            setUrlPrev('/portafolio');
-        }else if(url === '/portafolio/skills'){
-            setUrlNext('/portafolio/projects');
-            setUrlPrev('/portafolio/about');
-        }else if(url === '/portafolio/projects'){
-            setUrlNext('/portafolio/contact');
-            setUrlPrev('/portafolio/skills');
-        }else if(url==='/portafolio/contact'){
+        if(url==='/about'){
+            setUrlNext('/skills');
+            setUrlPrev('/');
+        }else if(url === '/skills'){
+            setUrlNext('/projects');
+            setUrlPrev('/about');
+        }else if(url === '/projects'){
+            setUrlNext('/contact');
+            setUrlPrev('/skills');
+        }else if(url==='/contact'){
             setUrlNext(null);
-            setUrlPrev('/portafolio')
+            setUrlPrev('/')
         }
     },[url])
 
@@ -65,7 +65,7 @@ export default function NavBar (){
                     <Link to='/contact' className={styles.link}>Contacto</Link>
                 </div>
             </div>
-            <motion.div className={styles.navegacionBtnCont} variants={navegacionVariants} hidden='hidden' animate={url==='/portafolio'||projectBack?'hidden':'show'} exit='exit' >
+            <motion.div className={styles.navegacionBtnCont} variants={navegacionVariants} hidden='hidden' animate={url==='/'||projectBack?'hidden':'show'} exit='exit' >
                 <Link to={urlNext} className={urlNext===null?styles.none:styles.btnLinkNext} onClick={()=>{dispacth({type:'project-back', payload:false})}}></Link>
                 <Link to={urlPrev} className={styles.btnLinkPrev} onClick={()=>{dispacth({type:'project-back', payload:false})}}></Link>
             </motion.div>
