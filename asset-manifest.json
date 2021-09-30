@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portafolio/static/css/main.1917f7f4.chunk.css",
+    "main.css": "/portafolio/static/css/main.66145f0d.chunk.css",
     "main.js": "/portafolio/static/js/main.e457a589.chunk.js",
     "main.js.map": "/portafolio/static/js/main.e457a589.chunk.js.map",
     "runtime-main.js": "/portafolio/static/js/runtime-main.ea17370c.js",
@@ -10,7 +10,7 @@
     "static/js/3.b281ec47.chunk.js": "/portafolio/static/js/3.b281ec47.chunk.js",
     "static/js/3.b281ec47.chunk.js.map": "/portafolio/static/js/3.b281ec47.chunk.js.map",
     "index.html": "/portafolio/index.html",
-    "static/css/main.1917f7f4.chunk.css.map": "/portafolio/static/css/main.1917f7f4.chunk.css.map",
+    "static/css/main.66145f0d.chunk.css.map": "/portafolio/static/css/main.66145f0d.chunk.css.map",
     "static/js/2.585fd9c8.chunk.js.LICENSE.txt": "/portafolio/static/js/2.585fd9c8.chunk.js.LICENSE.txt",
     "static/media/Home.module.scss": "/portafolio/static/media/whatsapp.8f84e8ce.png",
     "static/media/CVLlobellEspañol.74340a2e.pdf": "/portafolio/static/media/CVLlobellEspañol.74340a2e.pdf",
@@ -35,7 +35,7 @@
   "entrypoints": [
     "static/js/runtime-main.ea17370c.js",
     "static/js/2.585fd9c8.chunk.js",
-    "static/css/main.1917f7f4.chunk.css",
+    "static/css/main.66145f0d.chunk.css",
     "static/js/main.e457a589.chunk.js"
   ]
 }
