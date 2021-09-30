@@ -1,0 +1,279 @@
+.contDivsprueba{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    // background-color:  rgba(255, 255, 255, 0.137);
+}
+.particula {
+    position: relative;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+  }
+  
+  @for $i from 1 through 30 {
+    @keyframes particle-animation-#{$i} {
+      0% {
+        transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+      }
+      50% {
+        transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+      }
+      100% {
+        transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+      }
+    }
+    
+    .particula:nth-child(#{$i}){
+      animation: particle-animation-#{$i} 60s infinite;
+      $size: random(8) + 5 + px;
+      opacity: random(80)/100;
+      height: $size;
+      width: $size;
+      animation-delay: -$i * .5s;
+      transform: translate3d((random(90) * 1.6vw), (random(90) * 2vh), (random(100) * 1px));
+      background: rgb(255, 190, 241);
+    }
+  }
+
+  ///////////    DIVS & imgs    /////  /////////
+
+  ////////// lado izquierdo ///////////////////
+  .contactCont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .formCont{
+    position: relative;
+    top: 5%;
+    display: flex;
+    background-color: rgba(51, 103, 172, 0.068);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    width: 85vw;
+    height: 80vh;
+    z-index: 10;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+  }
+  .leftSide{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .textcontLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+  }
+  .h2contact{
+    color: white;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  .pcontact{
+    position: relative;
+    top: 15%;
+    
+    width: 80%;
+    font-size: 1.1rem;
+    color: white;
+  }
+  .ico{
+    position: relative;
+    top: 0rem;
+    left: 0%;
+    width: 30px;
+    height: 30px;
+  }
+  ///////////FORMULARIO//////////////
+  .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 75%;
+  }
+  .inputCont{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+  }
+  .input{
+    text-align: center;
+    width:35%;
+    height: 30%;
+    border:none;
+    background-color: rgba(66, 74, 85, 0.267);
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    outline: none;
+  }
+  .input::placeholder,
+  .textarea::placeholder{
+    color: white;
+    text-align: center;
+    opacity: .7;
+    font-size: 1rem;
+  }
+  .textarea::placeholder{
+    position: relative;
+    top: 45%;
+    opacity: .7;
+    font-size: 1rem;
+  }
+  .textareaCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 100%;
+  }
+  .buttonSend{
+    transition: .2s;
+    position: relative;
+    outline: none;
+    top: 5%;
+    border: none;
+    color: white;
+    border-radius: 15px;
+    width: 10%;
+    font-size: 1rem;
+    background-color: rgba(120, 171, 195, 0.541);
+    height: 15%;
+    cursor: pointer;
+    box-shadow: 0 0 10px black;
+  }
+  .buttonSend:hover{
+    transition: .2s;
+    background-color: rgba(120, 171, 195, 0.678);
+    box-shadow: 0 0 10px rgba(48, 164, 199, 0.253);
+    color: cyan;
+    letter-spacing: 1.5px;
+  }
+  .textarea{
+    outline: none;
+    position: relative;
+    top: -15%;
+    border-radius: 5px;
+    border:none;
+    color: white;
+    font-size: 1rem;
+    width: 80%;
+    text-align: center;
+    background-color: rgba(66, 74, 85, 0.267);
+    height: 50%;
+  }
+  ////////// lado derecho ///////////////////
+  .rightSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width:30%;
+    background-color: rgba(84, 114, 195, 0.123);
+    border-radius: 0 15px 15px 0;
+  }
+  .h2contactR{
+    color: white;position: relative;
+    top:5%;
+  }
+  .contIco{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    height: 50%;
+    width: 100%;
+  }
+  .contIco > div{
+    display: flex;
+    height: 30%;
+  }
+  .conticoname{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+  }
+  .iconame{
+    position: relative;
+    left: -8%;
+    color: white;
+  }
+  .info{
+    display: flex;
+    width: 70%;
+    color: white;
+    font-size: .8rem;
+    align-items: center;
+  }
+
+  @media (max-width:1000px) {
+    .formCont{
+      top: 10%;
+      height: 65vh;
+    }
+    .pcontact{
+      font-size: 14px;
+      width: 80%;
+    }
+    .h2contactR{
+      font-size: 1rem;
+    }
+    .buttonSend{
+      width: 15%;
+    }
+    .iconame{
+      font-size: 12px;
+    }
+    .info{
+      position: relative;
+      align-items: center;
+      left: 10%;
+       font-size: 9px;
+    }
+  }
+  @media (max-width:600px) {
+    .formCont{
+      top: 7%;
+      flex-direction: column;
+      height: 80vh;
+    }
+    .h2contact{
+      font-size:20px;
+    }
+    .buttonSend{
+      width: 25%;
+    }
+    .pcontact{
+      font-size: 12px;
+    }
+    .leftSide{
+      width: 100%;
+      height: 75%;
+    }
+    .ico{
+      width: 15px;
+      height: 15px;
+    }
+    .rightSide{
+      width: 100%;
+      border-radius: 0;
+      height: 25%;
+    }
+  }

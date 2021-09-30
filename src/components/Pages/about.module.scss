@@ -1,0 +1,41 @@
+.contDivsprueba{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    // background-color:  rgba(255, 255, 255, 0.137);
+}
+.particula {
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    border-radius: 50%;
+  }
+  
+  @for $i from 1 through 30 {
+    @keyframes particle-animation-#{$i} {
+      0% {
+        transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 3px));
+      }
+      50% {
+        transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 4px));
+      }
+      100% {
+        transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 10px));
+      }
+    }
+    
+    .particula:nth-child(#{$i}){
+      animation: particle-animation-#{$i} 60s infinite;
+      $size: random(15) + 2 + px;
+      opacity: random(40)/100;
+      height: $size;
+      width: $size;
+      animation-delay: -$i * .2s;
+      transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+      background:rgb(16, random(300) + 100, 207);
+    }
+  }

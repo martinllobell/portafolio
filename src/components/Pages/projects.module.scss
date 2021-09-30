@@ -1,0 +1,526 @@
+.contDivsprueba{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+.particula {
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    border-radius: 50%;
+  }
+  
+  @for $i from 1 through 30 {
+    @keyframes particle-animation-#{$i} {
+      0% {
+        transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 60px));
+      }
+      50% {
+        transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 10px));
+      }
+      100% {
+        transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 40px));
+      }
+    }
+    
+    .particula:nth-child(#{$i}){
+      animation: particle-animation-#{$i} 40s infinite alternate-reverse;
+      $size: random(5) + 1 + px;
+      opacity: random(50)/80;
+      height: $size;
+      width: $size;
+      animation-delay: -$i * .2s;
+      transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+      background:rgb(random(25)*90, 255, 255);
+    }
+  }
+.contMain{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // background-color:  rgb(0, 0, 0);
+}
+.deslizah2{
+  font-size: 1rem;
+  color: rgba(248, 248, 248, 0.808);
+  position: absolute;
+  bottom: 10%;
+  animation: latir ease .6s infinite alternate-reverse;
+}
+@keyframes latir {
+  from{transform: scale(1);}
+  to{transform: scale(1.1);}
+}
+.projectDescription{
+  color: #eee;
+  position: relative;
+  top: 7%;
+  text-decoration:dashed;
+}
+.contProject{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top:15%;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+    z-index: 5;
+}
+.h2Projects{
+    font-size: 2vw;
+    color: aliceblue;
+}
+.contProject > div {
+    border-radius: 5%;
+    border:1px solid #b5cfccb2 ;
+    width: 25%;
+    height: 80%;
+}
+.imgCard{
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+}
+.ghostdiv{
+    transition: .2s;
+    position: absolute;
+    bottom: 00%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 1.3rem 1.3rem;
+    background-color: rgba(10, 13, 15, 0.575);
+    width: 100%;
+    height: 0%;
+    z-index: 5;
+}
+.countries,
+.yoagronomo,
+.carrusell{
+    transition: .2s;
+    opacity: .7;
+}
+.countries:hover > .ghostdiv,
+.yoagronomo:hover > .ghostdiv,
+.carrusell:hover > .ghostdiv{
+    transition: .2s;
+    height: 30%;
+    opacity: 1;
+}
+.countries:hover,
+.yoagronomo:hover,
+.carrusell:hover{
+    transition: .2s;
+    opacity: 1 !important;
+    transform: translateY(-10%) scale(1.1);
+    cursor: pointer;
+}
+.countries:hover .h2Card,
+.yoagronomo:hover .h2Card,
+.carrusell:hover .h2Card{
+    transition: .2s;
+    font-size: 2rem;
+    opacity: 1;
+}
+.h2Card{
+    transition: .2s;
+    font-size: 0rem;
+    color: whitesmoke;
+    opacity: 0;
+}
+////////////cardfullscreenproject/////////////////////
+.fullScreenP{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top:0;
+  left: 0;
+  z-index: 8;
+  backdrop-filter: blur(2px);
+  width: 100vw;
+  height: 100vh;
+}
+.btnAtras{
+  transition: .2s;
+
+  position: absolute;
+  top: 14%;
+  right: 10%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border:none;
+  border-radius: 50%;
+  z-index: 8;
+  background-image: url('../../assets/cross.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: .7;
+  cursor: pointer;
+}
+.btnAtras:hover{
+  transition: .2s;
+  opacity: 1;
+  transform: scale(1.2);
+
+}
+.contProjectFullScreen{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  overflow:hidden;
+  z-index: 3;
+  align-items: center;
+}
+.sliderYDesc{
+  position: relative;
+  top: 2%;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.description{
+  text-align: center;
+  font-size: 1.4rem;
+  color: #eee;
+  width: 50vh;
+}
+.h1Project{
+  position: relative;
+  left: -20%;
+  top: -5%;
+  color:white;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+.none{
+  display: none;
+}
+.descriptionH4{
+  color: #eee;
+  position: relative;
+  text-align: center;
+  top: -5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+}
+.carruselImgs{
+  display: flex;
+  width: 40vw;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.imageCarruselAgronomo,
+.imageCarruselPaises,
+.imageCarruselCarruselApp{
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 40vw;
+  height:50vh;
+  margin-right: 50px;
+  border-radius: 10px;
+  background: #eee;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageCarruselCarruselApp{
+  position: relative;
+  left: 30%;
+  height: 50vh;
+  width: 20vw;
+}
+.carruselImgsCountries{
+  margin-left: 5%;
+  display: flex;
+  width: 22vw;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.arrowsCountries{
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  left: 35vw;
+  top: 15vh;
+  width: 10vw;
+  z-index: 7;
+  height: 20vh;
+}
+.imageCarruselPaises{
+  width: 22vw;
+  height: 60vh;
+  object-position: center;
+}
+.contInfo{
+  position: relative;
+  top: 10%;
+  display: flex;
+  text-align: center;
+  letter-spacing: 1px;
+  justify-content: space-around;
+  width: 100%;
+  color:aliceblue
+}
+.contInfo > h4 > p{
+  font-size: 12px;
+  margin-top: 10px;
+}
+.arrows{
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  left: 3.33vw;
+  top: 15vh;
+  width: 50vw;
+  z-index: 7;
+
+  height: 20vh;
+}
+.nextA,
+.prevA{
+  transition: .2s;
+  width: 60px;
+  height: 60px;
+  opacity: .6;
+  z-index: 8;
+  cursor: pointer;
+}
+.prevA{
+  transform: rotate(90deg);
+  position: relative;
+  left: 1%;
+}
+.nextA{
+  z-index: 7;
+  outline: none;
+  transform: rotate(270deg);
+}
+.nextA:hover{
+  transition: .2s;
+  transform: scale(1.2) rotate(270deg);
+}
+.prevA:hover{
+  transition: .2s;
+  transform: scale(1.2) rotate(90deg);
+}
+//////////// media querys //////////////////////////
+
+@media (max-width:1000px){
+  .contProject > div {
+    border-radius: 5%;
+    border:1px solid #b5cfccb2 ;
+    width: 30%;
+    height: 60%;
+  }
+  .projectDescription{
+    top: 15%;
+    font-size: 2vw;
+  }
+  .countries:hover .h2Card,
+  .yoagronomo:hover .h2Card,
+  .carrusell:hover .h2Card{
+      transition: .2s;
+      font-size: 1rem;
+      opacity: 1;
+  }
+  .btnLinkNext,
+  .btnLinkPrev{
+    width: 8vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .h2Projects{
+    font-size: 2rem;
+
+  }
+  .h1Project{
+    top: 0%;
+    left: 1%;
+    text-align: center;
+  }
+  .sliderYDesc{
+    top: 6%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+  .carruselImgs{
+    top: -5%;
+    width: 80vw;
+  }
+  .arrows{
+    width: 100%;
+  }
+  .nextA{
+    position: absolute;
+    top: 0;
+    right: 5%;
+  }
+  .imageCarruselAgronomo{
+    width: 80vw;
+    height: 40vh;
+  }
+  .descriptionH4{
+    top: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .description{
+    position: relative;
+    top: 5%;
+    text-align: center;
+    font-size: 1rem;
+    width: 80%;
+  }
+  .carruselImgsCountries{
+    margin: 0;
+    width: 80vw;
+  }
+  .imageCarruselPaises{
+    width: 80vw;
+    height: 50vh;
+  }
+  .arrowsCountries{
+    left: 3%;
+    width: 100vw;
+  }
+  .imageCarruselCarruselApp{
+    left: 2%;
+    top: -3%;
+    width: 60vw;
+  }
+  .btnAtras{
+    display: none;
+  }
+}
+@media (max-width:600px){
+
+  .contProject{
+    top: 40%;
+    position: absolute;
+    height: 32vh;
+    flex-direction: column;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  .contProject > div {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 30vh;
+    scroll-snap-align: center;
+    transform-origin: center center;
+    flex-shrink: 0;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    opacity: 1 !important;
+  }
+  .imgCard{
+    height: 30vh;
+    width: 100%;
+  }
+  .ghostdiv{
+    display: none;
+  }
+  .countries:hover ,
+  .yoagronomo:hover,
+  .carrusell:hover {
+    transition: .2s;
+    opacity: 1 !important;
+    transform: translateY(0) scale(1);
+    cursor: pointer;
+}
+.projectDescription{
+  top: 30%;
+  text-align: center;
+  width: 80%;
+  font-size: .8rem;
+}
+.description{
+  font-size: 12px;
+  height: 30vh;
+  text-align: center;
+}
+.h2Projects{
+  position: absolute;
+  top:20%;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+  .countries:hover > .ghostdiv,
+  .yoagronomo:hover > .ghostdiv,
+  .carrusell:hover > .ghostdiv{
+    display: none;
+  }
+  .navegacionBtnCont{
+    display: none;
+  }
+  .carruselImgsCountries{
+    margin: 0;
+    width: 80vw;
+    margin-left: -10%;
+  }
+  .carruselImgs{
+    margin-left: -10%;
+
+  }
+  .imageCarruselPaises{
+    width: 80vw;
+    height: 50vh;
+  }
+  .arrowsCountries{
+    left: 3%;
+    width: 100vw;
+  }
+  .none{
+    display: none;
+  }
+  .imageCarruselCarruselApp{
+    top: 0%;
+    left: 5%;
+    width: 80vw;
+    height: 60vh;
+  }
+  .contInfo{
+    display: none;
+  }
+  .h1Project{
+    top: 5%;
+    font-size: 2rem;
+  }
+  .nextA{
+    right: 1%;
+    width: 15%;
+  }
+}
