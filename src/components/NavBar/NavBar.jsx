@@ -41,7 +41,7 @@ export default function NavBar (){
     useEffect(()=>{
         if(url==='/about'){
             setUrlNext('/skills');
-            setUrlPrev('/');
+            setUrlPrev('/portafolio');
         }else if(url === '/skills'){
             setUrlNext('/projects');
             setUrlPrev('/about');
@@ -50,14 +50,14 @@ export default function NavBar (){
             setUrlPrev('/skills');
         }else if(url==='/contact'){
             setUrlNext(null);
-            setUrlPrev('/')
+            setUrlPrev('/portafolio')
         }
     },[url])
 
     return (
         <div>
             <div className={styles.navbar}>
-                <Link to='/' className={styles.ico}/>
+                <Link to='/portafolio' className={styles.ico}/>
                 <div className={styles.contLinks}>
                     <Link to='/about'className={styles.link}>Sobre mi</Link>
                     <Link to='/skills' className={styles.link}>Aptitudes</Link>
