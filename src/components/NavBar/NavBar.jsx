@@ -39,16 +39,16 @@ export default function NavBar (){
         setUrl(window.location.pathname);
     },[window.location.pathname])
     useEffect(()=>{
-        if(url==='/about'){
-            setUrlNext('/skills');
+        if(url==='/portafolio/about'){
+            setUrlNext('/portafolio/skills');
             setUrlPrev('/portafolio');
-        }else if(url === '/skills'){
-            setUrlNext('/projects');
-            setUrlPrev('/about');
+        }else if(url === '/portafolio/skills'){
+            setUrlNext('/portafolio/projects');
+            setUrlPrev('/portafolio/about');
         }else if(url === '/projects'){
-            setUrlNext('/contact');
-            setUrlPrev('/skills');
-        }else if(url==='/contact'){
+            setUrlNext('/portafolio/contact');
+            setUrlPrev('/portafolio/skills');
+        }else if(url==='/portafolio/contact'){
             setUrlNext(null);
             setUrlPrev('/portafolio')
         }

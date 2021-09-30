@@ -17,10 +17,10 @@ function App() {
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
           <Route exact path='/portafolio'><Home/></Route>
-          <Route path='/about'><About/></Route>
-          <Route path='/skills'><Skills/></Route>
-          <Route path='/projects'><Projects/></Route>
-          <Route path='/contact'><Contact/></Route>
+          <Route path='/portafolio/about'><About/></Route>
+          <Route path='/portafolio/skills'><Skills/></Route>
+          <Route path='/portafolio/projects'><Projects/></Route>
+          <Route path='/portafolio/contact'><Contact/></Route>
         </Switch>
       </AnimatePresence>
     </div>
