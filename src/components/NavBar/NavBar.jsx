@@ -45,7 +45,7 @@ export default function NavBar (){
         }else if(url === '/portafolio/skills'){
             setUrlNext('/portafolio/projects');
             setUrlPrev('/portafolio/about');
-        }else if(url === '/projects'){
+        }else if(url === '/portafolio/projects'){
             setUrlNext('/portafolio/contact');
             setUrlPrev('/portafolio/skills');
         }else if(url==='/portafolio/contact'){
